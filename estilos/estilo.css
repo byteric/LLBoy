@@ -142,7 +142,6 @@ nav .button.active:hover {
     border-color: var(--accent-orange);
     box-shadow: 0 0 20px var(--accent-orange);
     transform: none; 
-
 }
 
 main {
@@ -355,17 +354,14 @@ main {
     background-color: var(--accent-red);
 }
 
-.language-arduino .include { color: #569cd6; }
-.language-arduino .library { color: #b5cea8; }
-.language-arduino .type { color: #4ec9b0; }
-.language-arduino .variable { color: #9cdcfe; }
-.language-arduino .number { color: #b8d7a3; }
-.language-arduino .keyword { color: #c586c0; }
-.language-arduino .function { color: #dcdcaa; }
-.language-arduino .method { color: #dcdcaa; }
-.language-arduino .string { color: #ce9178; }
-.language-arduino .comment { color: #6a9955; font-style: italic; }
-.language-arduino .class { color: #4ec9b0; }
+.language-python .keyword { color: #c586c0; }
+.language-python .function { color: #dcdcaa; }
+.language-python .string { color: #ce9178; }
+.language-python .comment { color: #6a9955; font-style: italic; }
+.language-python .operator { color: #d4d4d4; }
+.language-python .number { color: #b8d7a3; }
+.language-python .builtin { color: #569cd6; }
+
 
 .secondary-button {
     background-color: var(--text-accent);
@@ -376,6 +372,12 @@ main {
     position: relative;
     overflow: hidden;
     display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .secondary-button::before {
@@ -449,4 +451,126 @@ footer p {
 #scrollToTopBtn:hover {
     background-color: var(--accent-orange);
     transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        letter-spacing: 3px;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav .button {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h2 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 1.1em;
+        max-width: 95%;
+    }
+
+    .content-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 1.8em;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .icon-tinkercad::before,
+    .icon-pecas::before,
+    .icon-codigo::before,
+    .icon-proposito::before,
+    .icon-equipe::before {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+
+    .content-section p,
+    .content-section ul {
+        font-size: 1em;
+    }
+
+    .content-section ul {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section pre {
+        padding: 15px;
+        font-size: 0.85em;
+    }
+
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 15px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .content-section h2 {
+        font-size: 1.5em;
+    }
+
+    .content-section p,
+    .content-section ul {
+        font-size: 0.95em;
+    }
+
+    .content-section pre {
+        font-size: 0.8em;
+    }
 }
